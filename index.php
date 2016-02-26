@@ -11,11 +11,11 @@ $app = new \Slim\Slim(array(
 $app->response()->header('Content-Type', 'application/json;charset=utf-8');
 
 $app->get('/', function () {
-	echo "E-vidence API 0.1";
+	echo "E-vidence API 1.1";
 });
 
 $app->get('/users', function () {
-	$sql = "SELECT id,username,first_name,last_name,password FROM pg_users ORDER BY id DESC";
+	$sql = "SELECT id,username,first_name,last_name,password FROM users ORDER BY id DESC";
 	try {
 		$db = getDB();
 		$stmt = $db->query($sql); 
