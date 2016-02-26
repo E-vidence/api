@@ -15,7 +15,7 @@ CREATE TABLE users (
 	last_name varchar(45) not null,
 	username varchar(45) not null,
 	password varchar(45) not null,
-	privilege_id integer REFERENCES privilege (id)
+	privilege_id integer REFERENCES privileges (id)
 	
 );
 
